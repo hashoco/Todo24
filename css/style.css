@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
+.hidden {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 100% of the viewport height */
+    margin: 0;
+}
+
+#bgImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    min-width: 1880px;
+    max-height: 1400px;
+    min-height: 1200px;
+    z-index: -5;
+    filter: brightness(30%);
+}
+
+#clock,
+#login-form,
+#gretting,
+#todo-form,
+#todo-list,
+#quote,
+#weather {
+    text-align: center;
+    margin-bottom: 20px; /* Add some spacing between the elements */
+    color: whitesmoke;
+}
+
+#weather {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 300;
+}
+
+#clock {
+    font-size: 150px;
+    color: whitesmoke;
+    font-weight: 500;
+    margin-top: -50px;
+    font-family: 'Noto Sans KR', sans-serif; /* Google Fonts에서 가져온 폰트 적용 */
+    border-radius: 10px; /* 텍스트를 둥글게 만들기 위해 border-radius 속성 추가 */
+    display: inline-block; /* 둥근 모서리가 적용되기 위해 display 속성 추가 */
+}
+
+#gretting {
+    font-size: 50px; /* 원하는 크기로 조절하세요 */
+    color: whitesmoke;
+    font-weight: 300;
+    margin-top: -30px; /* 원하는 만큼 위로 조절 (음수는 위쪽으로 이동) */
+}
+
+#quote {
+    
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: whitesmoke;
+    font-weight: 300;
+}
+
+#todo-list button {
+    border: none; /* 박스 스타일 제거 */
+    background: none; /* 박스 배경 제거 */
+    padding: 0; /* 내부 여백 제거 */
+    color: inherit; /* 부모 요소의 텍스트 색상 상속 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경 */
+    text-decoration: underline; /* 텍스트에 밑줄 추가 (원하면 제거 가능) */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+#todo-form input,
+#login-form input{
+    border: none; /* 테두리 제거 */
+    border-bottom: 1px solid whitesmoke; /* 밑줄 추가 및 색상 설정 */
+    outline: none; /* 포커스시 생기는 테두리 제거 */
+    background: none; /* 배경 제거 */
+    color: whitesmoke; /* 텍스트 색상 설정 */
+    font-size: 16px; /* 원하는 크기로 조절 */
+    padding: 5px; /* 원하는 여백 설정 */
+}
+
+#todo-list{
+    text-align: center;
+}
+    #todo-list li{
+        list-style: none;
+        color:rgba(250,250,250,0.8);
+        margin-top:40px;
+        margin-bottom:50px;
+        font-size:1rem;
+        width:540px;
+        margin: 0 auto;
+    }
+    #todo-list li:hover{
+        color:rgb(255, 166, 0);
+    }
+    #todo-list button{
+        margin-left:10px;
+        background-color:rgba(255,255,255,0);
+        outline: none;
+        color:white;
+        font-weight: 700;
+        width:30px;
+        height:30px;
+        border:none;
+        font-size:1.2rem;
+    }
+    #todo-list button:hover{
+        cursor: pointer;
+    }
+
+    #weather{
+        position:fixed;
+        top:20px;
+        right:36px;
+        color:white;
+        font-size:0.9rem;
+        font-weight: 700;
+    }
+        #weather:hover{
+            color:rgb(255, 166, 0);
+        }
+
+
+        #todo-list {
+            text-align: center;
+            max-height: 150px; /* 원하는 높이로 조절하세요 */
+            overflow-y: auto; /* 세로 스크롤 생성 */
+            overflow-x: hidden; /* 가로 스크롤 숨김 */
+        
+            /* 스크롤바 스타일링 */
+            scrollbar-color: rgba(255, 166, 0, 0.7) rgba(0, 0, 0, 0.1);
+            scrollbar-width: thin;
+        }
+        
+        #todo-list::-webkit-scrollbar {
+            width: 8px; /* 스크롤바 너비 */
+        }
+        
+        #todo-list::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 166, 0, 0.7); /* 스크롤바 색상 */
+            border-radius: 4px; /* 스크롤바 모서리 둥글게 */
+        }
+        
+        #todo-list::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0, 0.1); /* 스크롤바 트랙 배경색 */
+            border-radius: 4px; /* 스크롤바 트랙 모서리 둥글게 */
+        }
+        
